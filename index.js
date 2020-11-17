@@ -63,11 +63,14 @@ challenge4(testArgument2);
 
 //challenge5
 
-let testWord = "amro";
+let testWord = "amro nayef";
 
 function challenge5(testWord) {
-    testWord = testWord.charAt(0).toUpperCase() + testWord.slice(1);
-    document.getElementById("challenge5-result").innerHTML = testWord;
+    let testArray = testWord.toLowerCase().split(" ");
+    for (let i = 0; i < testArray.length; i++) {
+        testArray[i] = testArray[i].charAt(0).toUpperCase() + testArray[i].substring(1);
+    }
+    document.getElementById("challenge5-result").innerHTML = testArray.join(" ");
     console.log(testWord);
 }
 challenge5(testWord);
